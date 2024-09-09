@@ -1,0 +1,17 @@
+@* Map.razor *@
+
+<div class="map-container">
+    <svg @ref="mapSvg" class="map-svg" @onclick="HandleClick" width="100%" height="100%">
+        <!-- Load SVG content here -->
+        @* Use <g> and <path> elements for islands *@
+    </svg>
+</div>
+
+@code {
+    private ElementReference mapSvg;
+
+    private void HandleClick(MouseEventArgs e)
+    {
+        // Handle click events for interactivity
+    }
+}
