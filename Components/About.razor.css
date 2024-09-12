@@ -1,0 +1,70 @@
+﻿/* styles for the "about myself" section */
+#about {
+    padding: 2rem 1rem;
+    general: padding position: relative;
+    position: for the background image text-align: center;
+    center: the text
+}
+
+/* About content container */
+.about-content {
+    background-color: white;
+    width: 100%;
+    max-width: 600px; /* Default maximum width for mobile and smaller screens */
+    padding: 2rem;
+    margin: 3rem auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for emphasis */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Skills list styling */
+.skills-list {
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 2rem 0;
+    padding: 0; /* Remove extra padding to avoid overflow */
+    column-gap: 2rem; /* Gap between columns */
+    padding-inline-start: 20px; /* Ensure bullets are not too close to the edge */
+}
+
+/* Media query for larger screens (e.g., desktops, tablets in landscape mode) */
+@media screen and (min-width: 1024px) { /* Adjust breakpoint as needed */
+    .about-content {
+        max-width: 80%; /* Make the block wider on desktop */
+        padding: 3rem; /* Increase padding to suit the wider layout */
+    }
+
+    .skills-list {
+        columns: 2; /* Two columns for larger screens */
+    }
+}
+
+/* Media query for smaller screens (e.g., phones in portrait mode) */
+@media screen and (max-width: 767px) {
+    .about-content {
+        width: 90%; /* Full width with some padding */
+        padding: 2rem 4rem; /* Adjust padding */
+    }
+
+    .skills-list {
+        columns: 1; /* Single column for small screens */
+        padding-inline-start: 0; /* Align with content */
+        margin: 0; /* Remove margin to align with container */
+    }
+}
+
+/* optional: responsive typography */ 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+p.large {
+    font-size: 1.5rem;
+}
+
+p.detail {
+    padding: 1rem 3rem 0;
+}

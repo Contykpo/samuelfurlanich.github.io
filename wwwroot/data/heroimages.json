@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "home",
+    "Source": "images/cradle-continent-west.svg",
+    "AlternateText": "A large landmass in the west emisphere of The Cradle."
+  },
+  {
+    "Name": "about",
+    "Source": "images/cradle-continent-east.svg",
+    "AlternateText": "Abstract background of the landmass in the east emisphere of the map."
+  },
+  {
+    "Name": "portfolio",
+    "Source": "images/cradle-continent-valerios.svg",
+    "AlternateText": "A forgiven territory of no return."
+  }
+]

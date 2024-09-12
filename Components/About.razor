@@ -1,0 +1,45 @@
+﻿<section class="light" id="about">
+    @if (hero is not null)
+    {
+        <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
+    }
+    <h2>About Myself</h2>
+    <div class="about-content">
+        @if (aboutMe is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <p class="large">@aboutMe.Description</p>
+            <hr />
+            <ul class="skills-list">
+                @foreach (var skill in aboutMe.Skills)
+                {
+                    <li key="@skill">@skill</li>
+                }
+            </ul>
+            <hr />
+            <p class="detail">@aboutMe.DetailOrQuote</p>
+        }
+    </div>
+</section>
+
+@code
+{
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Parameter, EditorRequired]
+    public required HeroImageService HeroImageService { get; set; }
+
+    private AboutMe? aboutMe;
+    private HeroImage? hero;
+
+    protected override async Task OnInitializedAsync()
+    {
+        aboutMe = await Http.GetFromJsonAsync<AboutMe>("data/aboutme.json");
+
+        hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
+    }
+}

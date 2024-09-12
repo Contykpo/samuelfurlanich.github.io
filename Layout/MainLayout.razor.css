@@ -1,77 +1,95 @@
 .page {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default to column for better responsiveness */
+    max-width: 100%; /* Prevent overflow */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 main {
     flex: 1;
+    width: 100%; /* Ensure it takes full width */
 }
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    width: 100%; /* Adjust to full width on mobile */
+    max-width: 250px; /* Keep the sidebar to a max width */
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .top-row {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Improved for mobile view */
+    height: 3.5rem;
+    padding: 0 1rem; /* Prevent excessive padding causing overflow */
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
+    .top-row a, .top-row .btn-link {
         white-space: nowrap;
-        margin-left: 1.5rem;
+        margin-left: 1rem;
         text-decoration: none;
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
+        .top-row a:hover, .top-row .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+/* Adjustments for smaller screens */
+@media (max-width: auto) {
+    .page {
+        flex-direction: column; /* Ensure everything stacks properly */
+        overflow-x: hidden; /* Prevent overflow on mobile */
     }
 
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
     .top-row {
-        justify-content: space-between;
+        padding: 0.5rem; /* Reduce padding */
     }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
+        .top-row a, .top-row .btn-link {
+            margin-left: 0;
+        }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        position: relative; /* Adjust for better stacking on mobile */
+        height: auto; /* Allow height to auto adjust */
     }
 }
 
-@media (min-width: 641px) {
+/* Adjustments for larger screens */
+@media (min-width: auto) {
     .page {
         flex-direction: row;
+        max-width: 100%;
     }
 
     .sidebar {
         width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
     }
 
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth ::deep a:first-child {
+    .top-row.auth a:first-child {
         flex: 1;
         text-align: right;
-        width: 0;
+        width: auto;
     }
 
     .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: 2rem;
+        padding-right: 1.5rem;
+        max-width: 100%; /* Prevent overflow */
     }
 }

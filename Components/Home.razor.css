@@ -1,0 +1,38 @@
+﻿.home-content {
+    position: absolute;
+    top: 30%;
+    left: 2rem;
+}
+
+.home-arrow {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the arrow horizontally */
+}
+
+section.dark {
+    position: relative; /* Ensure the positioning context is maintained */
+    overflow: hidden; /* Prevent content from overflowing */
+    padding: 0; /* Remove any unwanted padding */
+    margin: 0; /* Ensure no extra margin */
+    min-height: 100vh; /* Ensure the section takes up full height */
+    width: 100%; /* Ensure the section takes up full width */
+    display: flex; /* Use flexbox to control child elements */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+section img.background {
+    width: 100%; /* Adjust to container width */
+    height: auto; /* Keep aspect ratio */
+    max-width: 100%; /* Prevent image from exceeding section */
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+}
