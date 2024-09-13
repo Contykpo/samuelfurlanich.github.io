@@ -1,4 +1,6 @@
-﻿<section class="dark" id="home">
+﻿@inject IJSRuntime js;
+
+<section class="dark" id="home">
     @if (hero is not null)
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
@@ -12,6 +14,9 @@
         {
             <h1>@property.Name</h1>
             <h2>@property.Title</h2>
+
+            <div id="container3D"></div>
+            <script type="module" src="js/main.js"></script>
         }
     </div>
     <div class="home-arrow">
@@ -20,6 +25,7 @@
         </a>
     </div>
 </section>
+
 
 @code
 {
