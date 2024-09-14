@@ -1,61 +1,100 @@
-﻿#container3D canvas {
-    height: 100vh !important;
-    width: 100vw !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.home-content {
-    position: absolute;
-    top: 10%;
-    left: 2rem;
-}
-
+﻿/* Home arrow positioning - always centered */
 .home-arrow {
     position: absolute;
-    bottom: 8rem;
+    /* Slight adjustment for mobile view */
+    bottom: 2rem;
     left: 50%;
-    /* Centers the arrow horizontally */
     transform: translateX(-50%);
+    /* Ensure it stays above other elements */
+    z-index: 2;
 }
 
-section.dark {
-    /* Ensure the positioning context is maintained */
-    position: relative;
-    /* Prevent content from overflowing */
-    overflow: hidden;
-    /* Remove any unwanted padding */
-    padding: 0;
-    /* Ensure no extra margin */
-    margin: 0;
-    /* Ensure the section takes up full height */
-    min-height: 100vh;
-    /* Ensure the section takes up full width */
-    width: 100%;
-    /* Use flexbox to control child elements */
+/* Container for 3D and text content */
+.home-content {
     display: flex;
-    /* Stack children vertically */
-    flex-direction: column;
-    /* Center content vertically */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* Full viewport height */
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Title Section */
+.home-title {
+    width: 50%;
+    text-align: left;
+    padding-left: 2rem;
+    z-index: 1;
+}
+
+/* 3D Model Section */
+.home-container3D {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    display: flex;
     justify-content: center;
-    /* Center content horizontally */
     align-items: center;
 }
 
-section img.background {
-    /* Adjust to container width */
+/* Ensure the 3D canvas occupies the right side */
+#container3D canvas {
     width: 100%;
-    /* Keep aspect ratio */
-    height: auto;
-    /* Prevent image from exceeding section */
-    max-width: 100%;
-    z-index: -1;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-    /* Ensures the image covers the section without distortion */
-    object-fit: cover;
+    right: 0;
+}
+
+/* Scrollable mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Allow content to expand */
+        height: auto;
+        padding: 1rem;
+        overflow: visible;
+    }
+
+    .home-title {
+        /* Full width for mobile */
+        width: 100%;
+        /* Center the text */
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .home-container3D {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    #container3D canvas {
+        width: 100%;
+        /* Shrinks the canvas on mobile */
+        height: 50vh;
+    }
+
+    body {
+        /* Enable vertical scrolling */
+        overflow-y: scroll;
+    }
+
+    section.dark {
+        /* Allow section to grow */
+        min-height: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .home-arrow {
+        /* Ensure it's always positioned at the bottom */
+        bottom: 1rem;
+    }
 }

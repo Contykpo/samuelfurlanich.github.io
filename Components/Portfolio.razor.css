@@ -21,14 +21,14 @@ section.light {
     width: 100%;
     /* Set a maximum width for centering */
     max-width: 1200px;
+    /* Padding for spacing */
+    padding: 2rem 1rem;
     /* Center horizontally */
     margin: 0 auto;
     /* Center items */
     align-items: center;
     /* Center content */
     justify-content: center;
-    /* Padding for spacing */
-    padding: 2rem 1rem;
     /* Include padding and border in the element's total width and height */
     box-sizing: border-box;
 }
