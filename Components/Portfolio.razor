@@ -1,4 +1,8 @@
 ﻿<section class="light" id="portfolio">
+    @if (hero is not null)
+    {
+        <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
+    }
     <h2>Portfolio</h2>
     <div class="portfolio-container">
         @if (projects is null)
@@ -7,28 +11,10 @@
         }
         else
         {
-            <div class="portfolio-hero">
-                @if (hero is not null)
-                {
-                    <img class="portfolio-hero-img" src="@(hero.Source)" alt="@(hero.AlternateText)" />
-                }
-            </div>
             <div class="container">
                 @foreach (var project in projects)
                 {
-                    <div class="project-box" key="@project.Title">
-                        <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                            <div class="project-content">
-                                <div class="project-image">
-                                    <img src="@project.Source" alt="@project.Title" />
-                                </div>
-                                <div class="project-info">
-                                    <h3>@project.Title</h3>
-                                    <p class="small">@project.Description</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <ProjectBox project="@project" />
                 }
             </div>
         }
@@ -53,4 +39,3 @@
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
 }
-

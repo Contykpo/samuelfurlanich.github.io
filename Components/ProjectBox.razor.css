@@ -1,0 +1,78 @@
+﻿.project-box {
+    background-color: white;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    padding: 1rem;
+}
+
+    .project-box:hover {
+        transform: translateY(-5px);
+    }
+
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.project-slideshow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-info {
+    padding-left: 1rem;
+}
+
+    .project-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+.technology-logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+    .tech-logo:hover {
+        transform: scale(1.2);
+    }
+
+.github-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+    transition: border 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+    .github-button:hover {
+        border: 3px solid purple;
+    }
+
+    .github-button:active {
+        transform: rotate(5deg);
+    }

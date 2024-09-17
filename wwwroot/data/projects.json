@@ -2,25 +2,29 @@
   {
     "Title": "10 Things To Know About Azure Static Web Apps",
     "Description": "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    "Source": "images/projects/placeholder.svg",
-    "Url": "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i"
+    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
+    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
+    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   },
   {
     "Title": "Web Development for Beginners",
     "Description": "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    "Source": "images/projects/placeholder.svg",
-    "Url": "https://github.com/microsoft/web-dev-for-beginners"
+    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
+    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
+    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   },
   {
     "Title": "My Resume Site",
     "Description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    "Source": "images/projects/placeholder.svg",
-    "Url": "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website"
+    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
+    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
+    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   },
   {
     "Title": "GitHub Codespaces and github.dev",
     "Description": "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    "Source": "images/projects/placeholder.svg",
-    "Url": "https://www.youtube.com/watch?v=c3hHhRME_XI"
+    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
+    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
+    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   }
 ]

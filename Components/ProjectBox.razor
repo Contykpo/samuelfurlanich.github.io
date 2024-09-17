@@ -1,0 +1,49 @@
+﻿<div class="project-box">
+    <div class="project-content">
+        <!-- Project preview image slideshow -->
+        <div class="project-slideshow">
+            @if (project.PreviewImages?.Any() == true)
+            {
+                <img src="@project.PreviewImages[currentImageIndex]" alt="@project.Title" />
+            }
+            <div class="slideshow-controls">
+                <button @onclick="PreviousImage">Previous</button>
+                <button @onclick="NextImage">Next</button>
+            </div>
+        </div>
+
+        <!-- Project info -->
+        <div class="project-info">
+            <h3>@project.Title</h3>
+            <p>@project.Description</p>
+        </div>
+    </div>
+
+    <!-- Technology used on the project -->
+    <div class="technology-logos">
+        @foreach (var technology in project.Technologies)
+        {
+            <img class="tech-logo" src="@technology" alt="Technology logo" />
+        }
+    </div>
+
+    <!-- Go to GitHub Repository button -->
+    <a href="@project.Url" target="_blank" rel="noopener noreferrer" class="github-button">
+        <img src="github-button.svg" alt="GitHub button" />
+    </a>
+</div>
+
+
+@code
+{
+    [Parameter]
+    public Project project { get; set; } = null!;
+
+    private int currentImageIndex = 0;
+
+    // Handle image slide next.
+    private void NextImage() => currentImageIndex = (currentImageIndex + 1) % project.PreviewImages.Count;
+
+    // Handle image slide previous.
+    private void PreviousImage() => currentImageIndex = (currentImageIndex - 1 + project.PreviewImages.Count) % project.PreviewImages.Count;
+}
