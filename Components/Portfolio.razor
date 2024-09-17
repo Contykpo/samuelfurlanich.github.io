@@ -16,12 +16,18 @@
             <div class="container">
                 @foreach (var project in projects)
                 {
-                    <div class="box" key="@project.Title">
+                    <div class="project-box" key="@project.Title">
                         <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                            <h3>@project.Title</h3>
+                            <div class="project-content">
+                                <div class="project-image">
+                                    <img src="@project.Source" alt="@project.Title" />
+                                </div>
+                                <div class="project-info">
+                                    <h3>@project.Title</h3>
+                                    <p class="small">@project.Description</p>
+                                </div>
+                            </div>
                         </a>
-
-                        <p class="small">@project.Description</p>
                     </div>
                 }
             </div>

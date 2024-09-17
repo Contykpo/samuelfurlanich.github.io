@@ -10,19 +10,53 @@
 
 /* About content container */
 .about-content {
-    background-color: white;
-    width: 100%;
-    /* Default maximum width for mobile and smaller screens */
-    max-width: 600px;
+    /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Light-blue border */
+    border: 2px solid rgba(173, 216, 230, 0.8);
+    /* Smooth rounded corners */
+    border-radius: 15px;
+    /* Padding inside the panel */
     padding: 2rem;
-    margin: 3rem auto;
-    text-align: center;
-    /* Optional: subtle shadow for emphasis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Rounded corners */
-    border-radius: 8px;
-    /* Prevent content from overflowing */
+    /* Width limit for the panel */
+    max-width: 90%;
+    /* Center panel horizontally */
+    margin: 2rem auto;
+    /* For positioning animations */
+    position: relative;
+    /* Subtle shadow for depth */
+    box-shadow: 0 0 20px rgba(173, 216, 230, 0.5);
+    /* Prevent content overflow */
     overflow: hidden;
+    /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Glowing pulse animation */
+    animation: pulse 3s infinite;
+    /* Center content text */
+    text-align: center;
+}
+
+/* Glowing pulse effect */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(173, 216, 230, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+    }
+}
+
+/* Hover effect: Lightens background on hover */
+.about-content:hover {
+    /* Lighter semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Stronger shadow when hovered */
+    box-shadow: 0 0 30px rgba(173, 216, 230, 1);
 }
 
 /* Skills list styling */
@@ -51,6 +85,15 @@
     .skills-list {
         /* Two columns for larger screens */
         columns: 2;
+    }
+}
+
+/* Media query for smaller screens (e.g., tablets in portrait mode, mobile phones) */
+@media screen and (max-width: 1024px) {
+    .about-content {
+        /* Adjust width for smaller screens */
+        max-width: 85%;
+        padding: 2.5rem;
     }
 }
 
