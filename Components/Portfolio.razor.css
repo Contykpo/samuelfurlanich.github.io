@@ -6,51 +6,26 @@ section.light {
     margin: 0 auto;
 }
 
-/* Portfolio container styling */
-.portfolio-container {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create responsive columns */
-    gap: 1.5rem; /* Space between grid items */
-    padding: 1rem;
-    justify-items: center; /* Center the grid items */
-    width: 100%;
-    max-width: 1200px; /* Set max width */
-    margin: 0 auto; /* Center grid container */
-}
-
-/* Container styling for projects */
-.container {
+.project-grid {
     display: grid;
-    /* Responsive columns for smaller screens */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
     width: 100%;
+    /* Optional max width for larger screens */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Portfolio container for desktop views */
-@media screen and (min-width: 768px) {
-    .portfolio-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* More columns on larger screens */
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 100%;
-        justify-self: center;
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
-/* Portfolio container for larger screens */
-@media screen and (min-width: 1200px) {
-    .container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+@media screen and (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }

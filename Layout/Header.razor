@@ -1,6 +1,37 @@
-﻿<div id="header">
-    <a href="#home" target="_top">Home</a>
-    <a href="#about" target="_top">About</a>
-    <a href="#portfolio" target="_top">Portfolio</a>
-    <a href="#contact" target="_top">Contact</a>
-</div>
+﻿<nav class="navbar" id="navbar">
+    <h5 class="navbar-title">
+        <a href="#home" class="navbar-logo">Samuel Furlanich</a>
+    </h5>
+
+    <div class="navbar-links" id="navbarLinks">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <button class="hamburger" @onclick="ToggleMenu">
+        <!-- Hamburger Icon -->
+        &#9776;
+    </button>
+
+    <div class="dropdown-menu" id="dropdownMenu" style="display: @(isMenuOpen ? "block" : "none")">
+        <a href="#about" @onclick="CloseMenu">About</a>
+        <a href="#portfolio" @onclick="CloseMenu">Portfolio</a>
+        <a href="#contact" @onclick="CloseMenu">Contact</a>
+    </div>
+</nav>
+
+@code
+{
+    private bool isMenuOpen = false;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+
+    private void CloseMenu()
+    {
+        isMenuOpen = false;
+    }
+}

@@ -1,0 +1,98 @@
+﻿<section class="contact-section light" id="contactinfo">
+    @if (hero is not null)
+    {
+        <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
+    }
+
+    <!-- Moves above the panel on mobile view -->
+    <div class="grid-header">
+        <h2>Contact Now!</h2>
+        <p>Leave a message below and let's discuss how we can collaborate on your next project.</p>
+    </div>
+
+    <!-- Contact form panel -->
+    <div class="contact-panel">
+        @if (successMessage != null)
+        {
+            <p class="message success-message">@successMessage</p>
+        }
+        else if (errorMessage != null)
+        {
+            <p class="message error-message">@errorMessage</p>
+        }
+
+        <EditForm Model="emailFormModel" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+
+            <div class="contact-form">
+                <!-- Name field with validation message -->
+                <InputText id="name" @bind-Value="emailFormModel.Name" placeholder="Name" />
+                <ValidationMessage For="@(() => emailFormModel.Name)" class="input-error-message" />
+
+                <!-- Email field with validation message -->
+                <InputText id="email" @bind-Value="emailFormModel.EmailAddress" placeholder="email@example.com" />
+                <ValidationMessage For="@(() => emailFormModel.EmailAddress)" class="input-error-message" />
+
+                <!-- Message field with validation message -->
+                <InputTextArea id="message" @bind-Value="emailFormModel.Message" placeholder="Message" />
+                <ValidationMessage For="@(() => emailFormModel.Message)" class="input-error-message" />
+
+                <!-- Submit button -->
+                <button type="submit" disabled="@isSubmitting">Send</button>
+            </div>
+        </EditForm>
+    </div>
+</section>
+
+
+@code
+{
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Parameter, EditorRequired]
+    public required HeroImageService HeroImageService { get; set; }
+
+    private HeroImage? hero;
+
+    private EmailForm emailFormModel = new EmailForm();
+    
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    private async Task HandleSubmit()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("https://usebasin.com/f/1435bcdf8bc7", emailFormModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Your message has been sent successfully!";
+
+                // Reset form
+                emailFormModel = new EmailForm();
+            }
+            else
+            {
+                errorMessage = "There was an error sending your message. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An unexpected error occurred: {ex.Message}";
+        }
+
+        isSubmitting = false;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        hero = await HeroImageService.GetHeroAsync(img => img.Name is "contactform");
+    }
+}

@@ -1,11 +1,93 @@
-﻿#header {
+﻿/* General styles for navbar */
+.navbar {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    background: rgba(255,255,255,0.75);
-    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Left-side logo */
+.navbar-title {
+    margin: 0;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    color: black;
+}
+
+/* Right-side nav links for desktop */
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+    .navbar-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+/* Hamburger button for mobile */
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Dropdown menu for mobile */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    display: none;
+    /* Stack items vertically */
+    flex-direction: column;
+    /* Spacing between links */
+    gap: 1rem;
+    padding: 1rem;
+    z-index: 999;
+}
+
+    .dropdown-menu a {
+        text-decoration: none;
+        color: black;
+        /* Padding for clickable area */
+        padding: 0.75rem 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s ease-in-out;
+        font-size: 1rem;
+        /* Center align the links */
+        text-align: center;
+    }
+
+        /* Hover effect for dropdown menu links */
+        .dropdown-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: flex;
+    }
 }

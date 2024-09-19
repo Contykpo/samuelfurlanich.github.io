@@ -4,19 +4,17 @@
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
     }
     <h2>Portfolio</h2>
-    <div class="portfolio-container">
+    <div class="project-grid">
         @if (projects is null)
         {
             <p><em>Loading...</em></p>
         }
         else
         {
-            <div class="container">
-                @foreach (var project in projects)
-                {
-                    <ProjectBox project="@project" />
-                }
-            </div>
+            @foreach (var project in projects)
+            {
+                <ProjectBox project="@project" />
+            }
         }
     </div>
 </section>

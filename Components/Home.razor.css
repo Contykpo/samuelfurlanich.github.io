@@ -18,6 +18,8 @@
     /* Full viewport height */
     height: 100vh;
     padding: 2rem;
+    /* Add some padding to avoid overlap with the navbar */
+    padding-top: 4rem;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -49,6 +51,48 @@
     right: 0;
 }
 
+/* Styling for the email button container */
+.email-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Styling for the email button link */
+.email-link {
+    display: flex;
+    align-items: center;
+    background-color: #0077B6; /* Ocean blue background */
+    border: 2px solid #005A8C; /* Dark blue border */
+    padding: 0.5rem 1rem;
+    border-radius: 10px; /* Smoothed borders */
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Image icon styling */
+.email-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.75rem; /* Space between the image and the text */
+}
+
+/* Styling for the text inside the email button */
+.email-link h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Hover effects for the button */
+.email-link:hover {
+    background-color: #0090D4; /* Slightly lighter ocean blue on hover */
+    transform: translateY(-3px); /* Lift the button slightly */
+}
+
+
 /* Scrollable mobile view adjustments */
 @media screen and (max-width: 768px) {
     .home-content {
@@ -57,6 +101,8 @@
         /* Allow content to expand */
         height: auto;
         padding: 1rem;
+        /* Add enough padding for the navbar in mobile */
+        padding-top: 6rem;
         overflow: visible;
     }
 

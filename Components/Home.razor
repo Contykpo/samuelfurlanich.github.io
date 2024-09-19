@@ -15,6 +15,13 @@
             <div class="home-title">
                 <h1>@property.Name</h1>
                 <h2>@property.Title</h2>
+
+                <div class="email-button">
+                    <a href="mailto:@(property.Email)" class="email-link">
+                        <img src="@icons.Email" alt="email" class="email-icon" />
+                        <h5>Contact Me</h5>
+                    </a>
+                </div>
             </div>
 
             <div class="home-container3D" id="container3D"></div>
@@ -38,12 +45,15 @@
     public required HeroImageService HeroImageService { get; set; }
 
     private SiteProperties? property;
+    private SocialIcons? icons;
     private HeroImage? hero;
 
     protected override async Task OnInitializedAsync()
     {
         property = await Http.GetFromJsonAsync<SiteProperties>("data/siteproperties.json");
- 
+        icons = await Http.GetFromJsonAsync<SocialIcons>("data/socialicons.json");
+
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "home");
     }
+
 }

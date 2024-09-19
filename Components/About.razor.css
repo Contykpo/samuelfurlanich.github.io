@@ -122,10 +122,26 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+hr {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
 p.large {
     font-size: 1.5rem;
 }
 
 p.detail {
     padding: 1rem 3rem 0;
+}
+
+li {
+    color: aliceblue;
+}
+
+li::marker {
+    color: aliceblue;
 }

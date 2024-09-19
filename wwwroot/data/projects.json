@@ -14,14 +14,14 @@
     "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   },
   {
-    "Title": "My Resume Site",
-    "Description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
+    "Title": "Web Development for Beginners",
+    "Description": "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities yareyareyara.",
     "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
     "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
     "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
   },
   {
-    "Title": "GitHub Codespaces and github.dev",
+    "Title": "GitHub Codespaces and github.dev And Milky Pants",
     "Description": "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
     "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
     "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],

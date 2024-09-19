@@ -1,0 +1,140 @@
+﻿/* Styles for the contact-form section */
+section.light {
+    padding: 8rem 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Container for the entire contact form section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-top: 2rem auto;
+    margin-bottom: 2rem auto;
+}
+
+/* Panel container for form and messages */
+.contact-panel {
+    /* Semi-transparent dark background */
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 2rem;
+    /* Smoothed borders */
+    border: 2px solid #ccc;
+    width: 100%;
+    /* Limit the size of the panel */
+    max-width: 600px;
+    /* Subtle shadow for effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contact form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+        /* Focused state */
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    /* Form button */
+    .contact-form button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+
+/* Success and error messages */
+.message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid green;
+}
+
+.error-message {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+}
+
+.input-error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Grid titles next to the panel (desktop view) */
+.grid-header {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive behavior for mobile */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-header {
+        text-align: center;
+    }
+
+    .contact-panel {
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .contact-form button {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Responsive typography */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
