@@ -1,15 +1,14 @@
 ﻿@page "/"
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
-@inject IStringLocalizer<MainResources> Localizer
+@inject IStringLocalizer<Resource> Localizer
 
-<PageTitle>@Localizer["Title"]</PageTitle>
-<h1>@Localizer["Title"]</h1>
+<PageTitle>@Localizer["title"]</PageTitle>
 
 <div class="glass-overlay">
     <!-- Spotlight div -->
     <div id="spotlight" class="spotlight"></div>
-    <Header />
+    <Header Http=@Http />
     <Home Http=@Http HeroImageService=@HeroImageService />
     <About Http=@Http HeroImageService=@HeroImageService />
     <Portfolio Http=@Http HeroImageService=@HeroImageService />

@@ -6,6 +6,7 @@ using samuelfurlanich.github.io;
 using samuelfurlanich.github.io.Services;
 using samuelfurlanich.github.io.Resources;
 using System.Globalization;
+using samuelfurlanich.github.io.Extensions;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -15,24 +16,9 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<HeroImageService>();
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-// English-US is set as default culture
-var culture = new CultureInfo("en-US");
-CultureInfo.DefaultThreadCurrentCulture = culture;
-CultureInfo.DefaultThreadCurrentUICulture = culture;
+builder.Services.AddLocalization();
 
 var host = builder.Build();
 
-// Set culture on application start
-var jsRuntime = host.Services.GetRequiredService<IJSRuntime>();
-var savedCulture = await jsRuntime.InvokeAsync<string>("localStorage.getItem", "PortfolioCulture");
-
-if (!string.IsNullOrWhiteSpace(savedCulture))
-{
-    culture = new CultureInfo(savedCulture);
-    CultureInfo.DefaultThreadCurrentCulture = culture;
-    CultureInfo.DefaultThreadCurrentUICulture = culture;
-}
-
+await host.SetDefaultCulture();
 await host.RunAsync();

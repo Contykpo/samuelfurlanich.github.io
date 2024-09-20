@@ -117,28 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Sobre mi</value>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contacto</value>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
   </data>
-  <data name="ContactMe" xml:space="preserve">
-    <value>Contactame</value>
+  <data name="contactMe" xml:space="preserve">
+    <value>Contact Me</value>
   </data>
-  <data name="ContactNow" xml:space="preserve">
-    <value>Entremos en Contacto</value>
+  <data name="contactNow" xml:space="preserve">
+    <value>Contact Now</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Inicio</value>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="Projects" xml:space="preserve">
-    <value>Proyectos</value>
+  <data name="projects" xml:space="preserve">
+    <value>Projects</value>
   </data>
-  <data name="SoftwareDeveloper" xml:space="preserve">
-    <value>Desarrollador de Software</value>
+  <data name="softwareDeveloper" xml:space="preserve">
+    <value>Software Developer</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>Samuel Furlanich Curriculum Vitae</value>
+  <data name="title" xml:space="preserve">
+    <value>Samuel Furlanich Portfolio</value>
   </data>
 </root>

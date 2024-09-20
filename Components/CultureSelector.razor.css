@@ -1,0 +1,22 @@
+﻿.culture-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-container {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+    .flag-container:hover {
+        border-color: lightblue;
+    }
+
+.flag-img {
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+}

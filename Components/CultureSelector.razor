@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Components;
+@using Microsoft.JSInterop;
+@using System.Globalization;
+
+<div class="culture-selector" style="display: flex; gap: 10px;">
+    @if (cultures is null)
+    {
+        <p><em>Loading Languages...</em></p>
+    }
+    else
+    {
+        @foreach (var culture in cultures)
+        {
+            <div class="flag-container" @onclick="() => ChangeCulture(new CultureInfo(culture.CultureName))">
+                <img src="@culture.CultureIconSource" alt="@culture.CultureDescription" class="flag-img" />
+            </div>
+        }
+    }
+</div>
+
+
+@code
+{
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    private List<Culture>? cultures;
+    private List<CultureInfo> culturesInfos = new List<CultureInfo>();
+
+    private void ChangeCulture(CultureInfo culture)
+    {
+        if (CultureInfo.CurrentCulture != culture)
+        {
+            var js = (IJSInProcessRuntime)JSRuntime;
+            js.InvokeVoid("blazorCulture.set", culture.Name);
+            NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cultures = await Http.GetFromJsonAsync<List<Culture>>("data/cultures.json");
+
+        foreach (var culture in cultures)
+        {
+            culturesInfos.Add(new CultureInfo(culture.CultureName));     
+        }
+    }
+}
