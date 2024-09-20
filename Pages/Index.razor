@@ -1,15 +1,23 @@
 ﻿@page "/"
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
+@inject IStringLocalizer<MainResources> Localizer
 
-<PageTitle>Portfolio</PageTitle>
+<PageTitle>@Localizer["Title"]</PageTitle>
+<h1>@Localizer["Title"]</h1>
 
-<Header />
-<Home Http=@Http HeroImageService=@HeroImageService />
-<About Http=@Http HeroImageService=@HeroImageService />
-<Portfolio Http=@Http HeroImageService=@HeroImageService />
-<ContactForm Http=@Http HeroImageService=@HeroImageService />
-<Footer Http=@Http PrimaryColor="#4E567E" SecondaryColor="#D2F1E4" />
+<div class="glass-overlay">
+    <!-- Spotlight div -->
+    <div id="spotlight" class="spotlight"></div>
+    <Header />
+    <Home Http=@Http HeroImageService=@HeroImageService />
+    <About Http=@Http HeroImageService=@HeroImageService />
+    <Portfolio Http=@Http HeroImageService=@HeroImageService />
+    <ContactForm Http=@Http HeroImageService=@HeroImageService />
+    <Footer Http=@Http PrimaryColor="#4E567E" SecondaryColor="#D2F1E4" />
+</div>
+<script src="js/spotlight.js"></script>
+
 
 @code
 {

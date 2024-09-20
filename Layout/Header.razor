@@ -1,4 +1,6 @@
-﻿<nav class="navbar" id="navbar">
+﻿@inject IJSRuntime js
+
+<nav class="navbar" id="navbar">
     <h5 class="navbar-title">
         <a href="#home" class="navbar-logo">Samuel Furlanich</a>
     </h5>
@@ -7,6 +9,10 @@
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <select @onchange="OnLanguageChange">
+            <option value="en-US">English</option>
+            <option value="es">Español</option>
+        </select>
     </div>
 
     <button class="hamburger" @onclick="ToggleMenu">
@@ -18,8 +24,13 @@
         <a href="#about" @onclick="CloseMenu">About</a>
         <a href="#portfolio" @onclick="CloseMenu">Portfolio</a>
         <a href="#contact" @onclick="CloseMenu">Contact</a>
+        <select @onchange="OnLanguageChange">
+            <option value="en-US">English</option>
+            <option value="es">Español</option>
+        </select>
     </div>
 </nav>
+
 
 @code
 {
@@ -33,5 +44,22 @@
     private void CloseMenu()
     {
         isMenuOpen = false;
+    }
+
+    private async Task OnLanguageChange(ChangeEventArgs eventChange)
+    {
+        if (eventChange?.Value is null)
+        {
+            // Handle error or fallback to default culture
+            return;
+        }
+
+        var culture = eventChange.Value.ToString();
+
+        // Save the culture to localStorage
+        await js.InvokeVoidAsync("localStorage.setItem", "PortfolioCulture", culture);
+
+        // Reload the page to apply the new culture
+        await js.InvokeVoidAsync("location.reload");
     }
 }

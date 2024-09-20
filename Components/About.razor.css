@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+/* About section styling */
+.about-section {
+    min-height: 75vh;
+    color: transparent;
+    padding: 8rem 0;
+}
+
 /* About content container */
 .about-content {
     /* Dark semi-transparent background */

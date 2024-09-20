@@ -1,36 +1,37 @@
-﻿/* Styles for the contact-form section */
-section.light {
-    padding: 8rem 0;
-    text-align: center;
+﻿/* Make the light background cover the entire viewport */
+.contactform-section {
+    /* Ensures the section covers most height of the viewport */
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    text-align: center;
+    padding: 8rem 0;
     margin: 0 auto;
+    color: transparent;
 }
 
-/* Container for the entire contact form section */
-.contact-section {
+/* Center the grid content within the section */
+.contact-section-grid {
     display: grid;
+    /* Two columns for desktop */
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    width: 100%;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    max-width: 1200px;
-    margin-top: 2rem auto;
-    margin-bottom: 2rem auto;
 }
 
 /* Panel container for form and messages */
 .contact-panel {
-    /* Semi-transparent dark background */
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 12px;
     padding: 2rem;
-    /* Smoothed borders */
     border: 2px solid #ccc;
     width: 100%;
-    /* Limit the size of the panel */
     max-width: 600px;
-    /* Subtle shadow for effect */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -105,24 +106,44 @@ section.light {
 
 /* Grid titles next to the panel (desktop view) */
 .grid-header {
-    text-align: left;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+    text-align: center;
 }
 
-/* Responsive behavior for mobile */
+    /* Responsive typography */
+    .grid-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: aliceblue;
+    }
+
+    .grid-header p {
+        font-size: 2rem;
+        color: aliceblue;
+    }
+
+/* Responsive behavior for mobile and tablet */
 @media screen and (max-width: 768px) {
-    .contact-section {
+    .contact-section-grid {
+        /* One column for mobile */
         grid-template-columns: 1fr;
-        gap: 1rem;
+        /* Stack elements vertically */
+        grid-template-rows: auto auto;
+        /* Center the elements */
+        justify-items: center;
+        /* Align them from the top */
+        align-items: start;
     }
 
     .grid-header {
+        /* Ensure this comes first */
+        order: 1;
         text-align: center;
+        margin-bottom: 1rem;
     }
 
     .contact-panel {
+        /* Ensure the panel comes below the header */
+        order: 2;
         margin: 0 auto;
         padding: 1.5rem;
     }
@@ -131,10 +152,4 @@ section.light {
         font-size: 1.2rem;
         padding: 0.75rem;
     }
-}
-
-/* Responsive typography */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
 }

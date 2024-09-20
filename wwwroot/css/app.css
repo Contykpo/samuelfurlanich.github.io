@@ -10,6 +10,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    background: rgba(20, 31, 56, 1);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -21,12 +22,6 @@ div#main {
 section {
     position: relative;
 }
-
-    section.dark {
-        min-height: 100vh;
-        color: white;
-        background: rgba(0, 0, 0, 0.25);
-    }
 
     section.light {
         color: black;
@@ -235,3 +230,54 @@ img.social-icon {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fading-bars {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.bar {
+    width: 10px;
+    height: 40px;
+    background-color: aliceblue;
+    animation: fade 1s infinite;
+}
+
+    .bar:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .bar:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .bar:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .bar:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .bar:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

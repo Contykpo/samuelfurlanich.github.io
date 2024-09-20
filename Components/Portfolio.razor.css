@@ -1,9 +1,10 @@
 ﻿/* Styles for the portfolio section */
-section.light {
+.portfolio-section {
     padding: 8rem 0;
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    color: transparent;
 }
 
 .project-grid {

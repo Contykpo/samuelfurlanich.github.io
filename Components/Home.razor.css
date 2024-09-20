@@ -1,27 +1,36 @@
-﻿/* Home arrow positioning - always centered */
-.home-arrow {
-    position: absolute;
-    /* Slight adjustment for mobile view */
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Ensure it stays above other elements */
-    z-index: 2;
+﻿/* Home section styling */
+.home-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* Container for 3D and text content */
+/* Background image styling */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ensures the image covers the entire section without distortion */
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Home content container */
 .home-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* Full viewport height */
     height: 100vh;
     padding: 2rem;
-    /* Add some padding to avoid overlap with the navbar */
+    /* Adjust for the navbar */
     padding-top: 4rem;
     box-sizing: border-box;
     overflow: hidden;
+    z-index: 1;
 }
 
 /* Title Section */
@@ -31,6 +40,14 @@
     padding-left: 2rem;
     z-index: 1;
 }
+
+    .home-title h1 {
+        color: aliceblue;
+    }
+
+    .home-title h2 {
+        color: aliceblue;
+    }
 
 /* 3D Model Section */
 .home-container3D {
@@ -92,6 +109,16 @@
     transform: translateY(-3px); /* Lift the button slightly */
 }
 
+/* Home arrow positioning - always centered */
+.home-arrow {
+    position: absolute;
+    /* Slight adjustment for mobile view */
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Ensure it stays above other elements */
+    z-index: 2;
+}
 
 /* Scrollable mobile view adjustments */
 @media screen and (max-width: 768px) {
