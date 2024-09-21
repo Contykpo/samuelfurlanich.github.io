@@ -15,6 +15,10 @@
     padding: 8rem 0;
 }
 
+.about-title {
+    padding-top: 8rem;
+}
+
 /* About content container */
 .about-content {
     /* Dark semi-transparent background */
@@ -127,6 +131,7 @@
 h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: aliceblue;
 }
 
 hr {

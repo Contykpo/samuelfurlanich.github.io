@@ -123,20 +123,38 @@
   <data name="contact" xml:space="preserve">
     <value>Contacto</value>
   </data>
+  <data name="contactCallToAction" xml:space="preserve">
+    <value>Dejame un mensaje y concetermos como puedo colaborar en tu proximo proyecto.</value>
+  </data>
+  <data name="contactErrorMessage" xml:space="preserve">
+    <value>Ocurrio un error al enviar el pensaje. Por favor intenta de nuevo.</value>
+  </data>
+  <data name="contactErrorMessageUnexpected" xml:space="preserve">
+    <value>Un error inesperado ocurrio: </value>
+  </data>
   <data name="contactMe" xml:space="preserve">
     <value>Contactame</value>
   </data>
   <data name="contactNow" xml:space="preserve">
     <value>Entremos en Contacto</value>
   </data>
+  <data name="contactSuccessMessage" xml:space="preserve">
+    <value>Tu mensaje fue enviado correctamente!</value>
+  </data>
   <data name="home" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="loadingLanguages" xml:space="preserve">
+    <value>Cargando Lenguajes...</value>
+  </data>
+  <data name="myTitle" xml:space="preserve">
+    <value>Desarrollador de Software</value>
+  </data>
   <data name="projects" xml:space="preserve">
     <value>Proyectos</value>
-  </data>
-  <data name="softwareDeveloper" xml:space="preserve">
-    <value>Desarrollador de Software</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>Samuel Furlanich Curriculum Vitae</value>

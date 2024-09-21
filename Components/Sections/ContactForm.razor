@@ -1,4 +1,6 @@
-﻿<section class="contactform-section contact-section-grid" id="contactinfo">
+﻿@inject IStringLocalizer<Resource> Localizer
+
+<section class="contactform-section contact-section-grid" id="contactinfo">
     @if (hero is not null)
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
@@ -6,8 +8,8 @@
 
     <!-- Moves above the panel on mobile view -->
     <div class="grid-header">
-        <h2>Contact Now!</h2>
-        <p>Leave a message below and let's discuss how we can collaborate on your next project.</p>
+        <h2>@Localizer["contactNow"]</h2>
+        <p>@Localizer["contactCallToAction"]</p>
     </div>
 
     <!-- Contact form panel -->
@@ -56,7 +58,7 @@
     private HeroImage? hero;
 
     private EmailForm emailFormModel = new EmailForm();
-    
+
     private bool isSubmitting = false;
     private string? successMessage;
     private string? errorMessage;
@@ -73,19 +75,19 @@
 
             if (response.IsSuccessStatusCode)
             {
-                successMessage = "Your message has been sent successfully!";
+                successMessage = Localizer["contactSuccessMessage"];
 
                 // Reset form
                 emailFormModel = new EmailForm();
             }
             else
             {
-                errorMessage = "There was an error sending your message. Please try again.";
+                errorMessage = Localizer["contactErrorMessage"];
             }
         }
         catch (Exception ex)
         {
-            errorMessage = $"An unexpected error occurred: {ex.Message}";
+            errorMessage = $"{Localizer["contactErrorMessageUnexpected"]}{ex.Message}";
         }
 
         isSubmitting = false;

@@ -1,13 +1,17 @@
-﻿<section class="about-section" id="about">
+﻿@inject IStringLocalizer<Resource> Localizer
+
+<section class="about-section" id="about">
     @if (hero is not null)
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
     }
-    <h2>About Myself</h2>
+    <div class="about-title">
+        <h2>@Localizer["about"]</h2>
+    </div>
     <div class="about-content">
         @if (aboutMe is null)
         {
-            <p><em>Loading...</em></p>
+            <p><em>@Localizer["loading"]</em></p>
         }
         else
         {

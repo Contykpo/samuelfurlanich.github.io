@@ -2,10 +2,12 @@
 @using Microsoft.JSInterop;
 @using System.Globalization;
 
+@inject IStringLocalizer<Resource> Localizer
+
 <div class="culture-selector" style="display: flex; gap: 10px;">
     @if (cultures is null)
     {
-        <p><em>Loading Languages...</em></p>
+        <p><em>@Localizer["loadingLanguages"]</em></p>
     }
     else
     {
@@ -31,14 +33,15 @@
     public IJSRuntime JSRuntime { get; set; }
 
     private List<Culture>? cultures;
-    private List<CultureInfo> culturesInfos = new List<CultureInfo>();
 
     private void ChangeCulture(CultureInfo culture)
     {
         if (CultureInfo.CurrentCulture != culture)
         {
             var js = (IJSInProcessRuntime)JSRuntime;
+
             js.InvokeVoid("blazorCulture.set", culture.Name);
+
             NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
         }
     }
@@ -46,10 +49,6 @@
     protected override async Task OnInitializedAsync()
     {
         cultures = await Http.GetFromJsonAsync<List<Culture>>("data/cultures.json");
-
-        foreach (var culture in cultures)
-        {
-            culturesInfos.Add(new CultureInfo(culture.CultureName));     
-        }
     }
+
 }

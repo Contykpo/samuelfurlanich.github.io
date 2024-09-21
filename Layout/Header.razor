@@ -1,14 +1,15 @@
 ﻿@inject IJSRuntime js
+@inject IStringLocalizer<Resource> Localizer
 
 <nav class="navbar" id="navbar">
     <h5 class="navbar-title">
         <a href="#home" class="navbar-logo">Samuel Furlanich</a>
     </h5>
 
-    <div class="navbar-links" id="navbarLinks">
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+    <div class="navbar-links">
+        <a href="#about">@Localizer["about"]</a>
+        <a href="#portfolio">@Localizer["projects"]</a>
+        <a href="#contact">@Localizer["contact"]</a>
         <div class="top-row px-4">
             <CultureSelector Http=@Http />
         </div>
@@ -19,15 +20,21 @@
         &#9776;
     </button>
 
-    <div class="dropdown-menu" id="dropdownMenu" style="display: @(isMenuOpen ? "block" : "none")">
-        <a href="#about" @onclick="CloseMenu">About</a>
-        <a href="#portfolio" @onclick="CloseMenu">Portfolio</a>
-        <a href="#contact" @onclick="CloseMenu">Contact</a>
-        <div class="top-row px-4">
+</nav>
+
+<div class="side-panel" style="transform: @(isMenuOpen ? "translateX(0)" : "translateX(100%)")">
+    <div class="panel-content">
+        <div class="vertical-links">
+            <a href="#about" @onclick="CloseMenu">@Localizer["about"]</a>
+            <a href="#portfolio" @onclick="CloseMenu">@Localizer["projects"]</a>
+            <a href="#contact" @onclick="CloseMenu">@Localizer["contact"]</a>
+        </div>
+
+        <div class="horizontal-buttons">
             <CultureSelector Http=@Http />
         </div>
     </div>
-</nav>
+</div>
 
 
 @code
@@ -37,14 +44,8 @@
 
     private bool isMenuOpen = false;
 
-    private void ToggleMenu()
-    {
-        isMenuOpen = !isMenuOpen;
-    }
+    private void ToggleMenu() => isMenuOpen = !isMenuOpen;
 
-    private void CloseMenu()
-    {
-        isMenuOpen = false;
-    }
+    private void CloseMenu() => isMenuOpen = false;
 
 }

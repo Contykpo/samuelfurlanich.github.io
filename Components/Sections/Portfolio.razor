@@ -1,13 +1,15 @@
-﻿<section class="portfolio-section" id="portfolio">
+﻿@inject IStringLocalizer<Resource> Localizer
+
+<section class="portfolio-section" id="portfolio">
     @if (hero is not null)
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
     }
-    <h2>Portfolio</h2>
+    <h2>@Localizer["projects"]</h2>
     <div class="project-grid">
         @if (projects is null)
         {
-            <p><em>Loading...</em></p>
+            <p><em>@Localizer["loading"]</em></p>
         }
         else
         {

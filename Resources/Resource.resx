@@ -123,20 +123,38 @@
   <data name="contact" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="contactCallToAction" xml:space="preserve">
+    <value>Leave a message below and let's discuss how we can collaborate on your next project.</value>
+  </data>
+  <data name="contactErrorMessage" xml:space="preserve">
+    <value>There was an error sending your message. Please try again.</value>
+  </data>
+  <data name="contactErrorMessageUnexpected" xml:space="preserve">
+    <value>An unexpected error occurred: </value>
+  </data>
   <data name="contactMe" xml:space="preserve">
     <value>Contact Me</value>
   </data>
   <data name="contactNow" xml:space="preserve">
     <value>Contact Now</value>
   </data>
+  <data name="contactSuccessMessage" xml:space="preserve">
+    <value>Your message has been sent successfully!</value>
+  </data>
   <data name="home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="loadingLanguages" xml:space="preserve">
+    <value>Loading Languages...</value>
+  </data>
+  <data name="myTitle" xml:space="preserve">
+    <value>Software Developer</value>
+  </data>
   <data name="projects" xml:space="preserve">
     <value>Projects</value>
-  </data>
-  <data name="softwareDeveloper" xml:space="preserve">
-    <value>Software Developer</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>Samuel Furlanich Portfolio</value>

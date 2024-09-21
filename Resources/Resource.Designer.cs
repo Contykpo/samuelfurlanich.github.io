@@ -39,7 +39,7 @@ namespace samuelfurlanich.github.io.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("samuelfurlanich.github.io.Resources", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("samuelfurlanich.github.io.Resources.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -79,6 +79,33 @@ namespace samuelfurlanich.github.io.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Leave a message below and let&apos;s discuss how we can collaborate on your next project..
+        /// </summary>
+        internal static string contactCallToAction {
+            get {
+                return ResourceManager.GetString("contactCallToAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error sending your message. Please try again..
+        /// </summary>
+        internal static string contactErrorMessage {
+            get {
+                return ResourceManager.GetString("contactErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unexpected error occurred: .
+        /// </summary>
+        internal static string contactErrorMessageUnexpected {
+            get {
+                return ResourceManager.GetString("contactErrorMessageUnexpected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact Me.
         /// </summary>
         internal static string contactMe {
@@ -97,6 +124,15 @@ namespace samuelfurlanich.github.io.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your message has been sent successfully!.
+        /// </summary>
+        internal static string contactSuccessMessage {
+            get {
+                return ResourceManager.GetString("contactSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         internal static string home {
@@ -106,20 +142,38 @@ namespace samuelfurlanich.github.io.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Projects.
+        ///   Looks up a localized string similar to Loading....
         /// </summary>
-        internal static string projects {
+        internal static string loading {
             get {
-                return ResourceManager.GetString("projects", resourceCulture);
+                return ResourceManager.GetString("loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading Languages....
+        /// </summary>
+        internal static string loadingLanguages {
+            get {
+                return ResourceManager.GetString("loadingLanguages", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Software Developer.
         /// </summary>
-        internal static string softwareDeveloper {
+        internal static string myTitle {
             get {
-                return ResourceManager.GetString("softwareDeveloper", resourceCulture);
+                return ResourceManager.GetString("myTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Projects.
+        /// </summary>
+        internal static string projects {
+            get {
+                return ResourceManager.GetString("projects", resourceCulture);
             }
         }
         

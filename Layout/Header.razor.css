@@ -1,4 +1,4 @@
-﻿/* General styles for navbar */
+﻿/* Navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -7,8 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     z-index: 1000;
 }
 
@@ -19,62 +18,90 @@
 
 .navbar-logo {
     text-decoration: none;
-    color: black;
+    color: rgba(39, 61, 110, 1);
+    font-weight: bold;
 }
 
-/* Right-side nav links for desktop */
+/* Navbar links for desktop */
 .navbar-links {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
     .navbar-links a {
         text-decoration: none;
-        color: black;
+        color: rgba(39, 61, 110, 1);
         font-weight: bold;
     }
 
-/* Hamburger button for mobile */
+/* Hamburger button styling */
 .hamburger {
     display: none;
     background-color: transparent;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-/* Dropdown menu for mobile */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 1rem;
+/* Side panel styling */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    display: none;
-    /* Stack items vertically */
-    flex-direction: column;
-    /* Spacing between links */
-    gap: 1rem;
-    padding: 1rem;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
     z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 2rem 1rem;
 }
 
-    .dropdown-menu a {
-        text-decoration: none;
-        color: black;
-        /* Padding for clickable area */
-        padding: 0.75rem 1rem;
-        border-radius: 0.25rem;
-        transition: background-color 0.2s ease-in-out;
-        font-size: 1rem;
-        /* Center align the links */
-        text-align: center;
+/* Panel content */
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 15%;
+    justify-content: space-between;
+}
+
+/* Vertical links */
+.vertical-links a {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: rgba(39, 61, 110, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+    .vertical-links a:hover {
+        color: #007bff;
     }
 
-        /* Hover effect for dropdown menu links */
-        .dropdown-menu a:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+/* Horizontal buttons */
+.horizontal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+    .horizontal-buttons button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .horizontal-buttons button:hover {
+            background-color: #0056b3;
         }
 
 /* Mobile view adjustments */
@@ -87,7 +114,9 @@
         display: block;
     }
 
-    .dropdown-menu {
-        display: flex;
+    .side-panel {
+        /* Full width on mobile */
+        width: 50%;
+        max-width: 75%;
     }
 }
