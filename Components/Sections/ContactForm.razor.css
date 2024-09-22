@@ -1,27 +1,21 @@
 ﻿/* Make the light background cover the entire viewport */
 .contactform-section {
-    /* Ensures the section covers most height of the viewport */
-    min-height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
     padding: 8rem 0;
+    text-align: center;
+    vertical-align: central;
+    width: 100%;
     margin: 0 auto;
     color: transparent;
 }
 
-/* Center the grid content within the section */
-.contact-section-grid {
+/* Grid container styling */
+.responsive-grid-container {
     display: grid;
-    /* Two columns for desktop */
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem; /* Space between the columns */
+    justify-items: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically */
+    vertical-align: central;
 }
 
 /* Panel container for form and messages */
@@ -30,12 +24,11 @@
     border-radius: 12px;
     padding: 2rem;
     border: 2px solid #ccc;
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
+    height: 300px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 /* Contact form styles */
@@ -107,6 +100,8 @@
 /* Grid titles next to the panel (desktop view) */
 .grid-header {
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
     /* Responsive typography */
@@ -123,15 +118,9 @@
 
 /* Responsive behavior for mobile and tablet */
 @media screen and (max-width: 768px) {
-    .contact-section-grid {
-        /* One column for mobile */
-        grid-template-columns: 1fr;
-        /* Stack elements vertically */
-        grid-template-rows: auto auto;
-        /* Center the elements */
-        justify-items: center;
-        /* Align them from the top */
-        align-items: start;
+    .responsive-grid-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1.5rem; /* Space between the rows */
     }
 
     .grid-header {
@@ -145,7 +134,8 @@
         /* Ensure the panel comes below the header */
         order: 2;
         margin: 0 auto;
-        padding: 1.5rem;
+        padding: 1rem;
+        max-width: 300px;
     }
 
     .contact-form button {

@@ -1,12 +1,12 @@
 {
-  "description": "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.",
+  "description": "I'm a Computer Science student studying at University of Buenos Aires. I enjoy creating unique and useful applications in creative ways.",
   "skills": [
-    "Web design",
-    "User experience",
-    "Inclusive design",
-    "Focus group testing",
-    "Mobile user interfaces",
-    "Graphic design"
+    "C#",
+    ".NET",
+    "Blazor",
+    "MAUI, WPF, Unity",
+    "Entity Framework",
+    "SQL"
   ],
-  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all."
+  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By working on solutions for complex problems I continually grow my knowledge and skills to make powerful state-of-the-art applications."
 }

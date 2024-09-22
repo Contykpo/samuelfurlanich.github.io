@@ -5,27 +5,32 @@
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
     }
-    <div class="about-title">
-        <h2>@Localizer["about"]</h2>
+
+    <div data-aos="fade-up">
+        <div class="about-title">
+            <h2>@Localizer["about"]</h2>
+        </div>
     </div>
-    <div class="about-content">
-        @if (aboutMe is null)
-        {
-            <p><em>@Localizer["loading"]</em></p>
-        }
-        else
-        {
-            <p class="large">@aboutMe.Description</p>
-            <hr />
-            <ul class="skills-list">
-                @foreach (var skill in aboutMe.Skills)
-                {
-                    <li key="@skill">@skill</li>
-                }
-            </ul>
-            <hr />
-            <p class="detail">@aboutMe.DetailOrQuote</p>
-        }
+    <div data-aos="flip-up" data-aos-duration="500">
+        <div class="about-content">
+            @if (aboutMe is null)
+            {
+                <p><em>@Localizer["loading"]</em></p>
+            }
+            else
+            {
+                <p class="large">@aboutMe.Description</p>
+                <hr />
+                <ul class="skills-list">
+                    @foreach (var skill in aboutMe.Skills)
+                    {
+                        <li key="@skill">@skill</li>
+                    }
+                </ul>
+                <hr />
+                <p class="detail">@aboutMe.DetailOrQuote</p>
+            }
+        </div>
     </div>
 </section>
 

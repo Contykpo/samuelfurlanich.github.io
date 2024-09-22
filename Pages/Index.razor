@@ -2,6 +2,7 @@
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
 @inject IStringLocalizer<Resource> Localizer
+@inject IJSRuntime Js
 
 <PageTitle>@Localizer["title"]</PageTitle>
 
@@ -9,7 +10,7 @@
     <!-- Spotlight div -->
     <div id="spotlight" class="spotlight"></div>
     <Header Http=@Http />
-    <Home Http=@Http HeroImageService=@HeroImageService />
+    <Home Http=@Http JS=@Js HeroImageService=@HeroImageService />
     <About Http=@Http HeroImageService=@HeroImageService />
     <Portfolio Http=@Http HeroImageService=@HeroImageService />
     <ContactForm Http=@Http HeroImageService=@HeroImageService />
@@ -20,5 +21,11 @@
 
 @code
 {
-
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Js.InvokeVoidAsync("AOS.init");
+        }
+    }
 }
