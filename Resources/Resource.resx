@@ -141,6 +141,12 @@
   <data name="contactSuccessMessage" xml:space="preserve">
     <value>Your message has been sent successfully!</value>
   </data>
+  <data name="download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="downloadCV" xml:space="preserve">
+    <value>Download CV</value>
+  </data>
   <data name="home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -149,6 +155,9 @@
   </data>
   <data name="loadingLanguages" xml:space="preserve">
     <value>Loading Languages...</value>
+  </data>
+  <data name="myCV" xml:space="preserve">
+    <value>My Resume</value>
   </data>
   <data name="myTitle" xml:space="preserve">
     <value>Software Developer</value>

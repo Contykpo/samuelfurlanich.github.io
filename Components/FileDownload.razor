@@ -1,0 +1,38 @@
+﻿@inject IStringLocalizer<Resource> Localizer
+
+<script src="js/fileDownload.js"></script>
+<button class="download-file-button" @onclick="DownloadFileFromURL">
+    <h5>@Localizer[$"download{FileName}"]</h5>
+    <img src="@IconSource" alt="Download file" class="download-file-icon" />
+</button>
+
+
+@code
+{
+    [Parameter, EditorRequired]
+    public required IJSRuntime JS { get; set; }
+
+    [Parameter, EditorRequired]
+    public required HttpClient Http { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string? FileName { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string? IconSource { get; set; }
+
+    private List<DownloadableFile>? downloadableFiles;
+    private DownloadableFile? downloadableFile;
+
+    protected override async Task OnInitializedAsync()
+    {
+        downloadableFiles = await Http.GetFromJsonAsync<List<DownloadableFile>>("data/filedownloads.json");
+
+        downloadableFile = downloadableFiles.Find(f => f.Name == FileName);
+    }
+
+    private async Task DownloadFileFromURL()
+    {
+        await JS.InvokeVoidAsync("triggerFileDownload", downloadableFile.Name, downloadableFile.Url);
+    }
+}

@@ -1,0 +1,39 @@
+﻿/* Styling for the google drive button link */
+.download-file-button {
+    display: flex;
+    align-items: center;
+    /* Ocean blue background */
+    background-color: #0077B6;
+    /* Dark blue border */
+    border: 2px solid #005A8C;
+    padding: 0.5rem 1rem;
+    /* Smoothed borders */
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Image icon styling */
+.download-file-icon {
+    width: 24px;
+    height: 24px;
+    /* Space between the image and the text */
+    margin-left: 0.75rem;
+}
+
+/* Styling for the text inside the google drive button */
+.download-file-button h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Hover effects for the button */
+.download-file-button:hover {
+    /* Slightly lighter ocean blue on hover */
+    background-color: #0090D4;
+    /* Lift the button slightly */
+    transform: translateY(-3px);
+}

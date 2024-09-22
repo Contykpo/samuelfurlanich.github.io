@@ -133,6 +133,24 @@ namespace samuelfurlanich.github.io.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        internal static string download {
+            get {
+                return ResourceManager.GetString("download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download CV.
+        /// </summary>
+        internal static string downloadCV {
+            get {
+                return ResourceManager.GetString("downloadCV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         internal static string home {
@@ -156,6 +174,15 @@ namespace samuelfurlanich.github.io.Resources {
         internal static string loadingLanguages {
             get {
                 return ResourceManager.GetString("loadingLanguages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Resume.
+        /// </summary>
+        internal static string myCV {
+            get {
+                return ResourceManager.GetString("myCV", resourceCulture);
             }
         }
         

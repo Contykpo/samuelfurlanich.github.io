@@ -36,8 +36,8 @@
 /* Title Section */
 .home-title {
     width: 50%;
-    text-align: left;
-    padding-left: 2rem;
+    text-align: center;
+    padding-left: 1rem;
     z-index: 1;
 }
 
@@ -80,10 +80,13 @@
 .email-link {
     display: flex;
     align-items: center;
-    background-color: #0077B6; /* Ocean blue background */
-    border: 2px solid #005A8C; /* Dark blue border */
+    /* Ocean blue background */
+    background-color: #0077B6;
+    /* Dark blue border */
+    border: 2px solid #005A8C;
     padding: 0.5rem 1rem;
-    border-radius: 10px; /* Smoothed borders */
+    /* Smoothed borders */
+    border-radius: 10px;
     text-decoration: none;
     color: white;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -93,7 +96,8 @@
 .email-icon {
     width: 24px;
     height: 24px;
-    margin-right: 0.75rem; /* Space between the image and the text */
+    /* Space between the image and the text */
+    margin-left: 0.75rem;
 }
 
 /* Styling for the text inside the email button */
@@ -105,9 +109,110 @@
 
 /* Hover effects for the button */
 .email-link:hover {
-    background-color: #0090D4; /* Slightly lighter ocean blue on hover */
-    transform: translateY(-3px); /* Lift the button slightly */
+    /* Slightly lighter ocean blue on hover */
+    background-color: #0090D4;
+    /* Lift the button slightly */
+    transform: translateY(-3px);
 }
+
+
+/* Styles for the dropdown button */
+.dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    /* Ocean blue background */
+    background-color: #0077B6;
+    /* Dark blue border */
+    border: 2px solid #005A8C;
+    padding: 0.5rem 1rem;
+    /* Smoothed borders */
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+    .dropdown-button h5 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+.dropdown-button-icon {
+    width: 24px;
+    height: 24px;
+    /* Space between the image and the text */
+    margin-left: 0.75rem;
+}
+
+/* Dropdown container behaves like a grid column of two rows */
+.dropdown-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    justify-content: center;
+    vertical-align: central;
+    align-content: center;
+}
+
+
+/* Styling for the email button container */
+.google-drive-button {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Styling for the google drive button link */
+.google-drive-link {
+    display: flex;
+    align-items: center;
+    /* Ocean blue background */
+    background-color: #0077B6;
+    /* Dark blue border */
+    border: 2px solid #005A8C;
+    padding: 0.5rem 1rem;
+    /* Smoothed borders */
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Image icon styling */
+.google-drive-icon {
+    width: 24px;
+    height: 24px;
+    /* Space between the image and the text */
+    margin-left: 0.75rem;
+}
+
+/* Styling for the text inside the google drive button */
+.google-drive-link h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Hover effects for the button */
+.google-drive-link:hover {
+    /* Slightly lighter ocean blue on hover */
+    background-color: #0090D4;
+    /* Lift the button slightly */
+    transform: translateY(-3px);
+}
+
+
+.grid-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
 
 /* Home arrow positioning - always centered */
 .home-arrow {

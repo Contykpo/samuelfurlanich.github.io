@@ -4,7 +4,7 @@
     width: 700px;
     height: 700px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(53, 96, 148, 0.25), transparent 80%);
+    background: radial-gradient(circle, rgba(53, 96, 148, 0.27), transparent 80%);
     /* Prevent interaction with the spotlight */
     pointer-events: none;
     /* Ensures the spotlight appears lighter on dark areas */
@@ -12,7 +12,7 @@
     /* Make sure it's above other elements */
     z-index: 10;
     /* Apply a soft blur for the glowing effect */
-    filter: blur(100px);
+    filter: blur(50px);
     /* Smooth following effect */
     transition: left 0.05s, top 0.05s;
 }
