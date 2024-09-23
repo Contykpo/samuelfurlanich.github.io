@@ -37,7 +37,7 @@
 .slideshow-controls {
     position: absolute;
     /* Semi-transparent background for better visibility */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(49, 81, 140, 0.5);
     border: none;
     padding: 0.5rem;
     cursor: pointer;
@@ -51,7 +51,7 @@
     }
 
     .slideshow-controls:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(49, 81, 140, 0.8);
     }
 
     /* Position the buttons */
@@ -109,7 +109,7 @@
     bottom: 20px;
     right: 20px;
     /* Semi-transparent dark background */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(49, 81, 140, 0.5);
     border: none;
     /* Adjust padding for size */
     padding: 0.5rem;
@@ -131,7 +131,7 @@
 
     .github-button:hover {
         /* Darker background on hover */
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(49, 81, 140, 0.8);
         /* Slight scaling effect on hover */
         transform: scale(1.1);
     }
