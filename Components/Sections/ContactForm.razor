@@ -44,7 +44,9 @@
                         <ValidationMessage For="@(() => emailFormModel.Message)" class="input-error-message" />
 
                         <!-- Submit button -->
-                        <button type="submit" disabled="@isSubmitting">Send</button>
+                        <button class="send-button" type="submit" disabled="@isSubmitting">
+                            <h5>@Localizer[$"send"]</h5>
+                        </button>
                     </div>
                 </EditForm>
             </div>

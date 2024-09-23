@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     /* Ocean blue background */
-    background-color: #0077B6;
+    background-color: aliceblue;
     /* Dark blue border */
-    border: 2px solid #005A8C;
+    border: 2px solid rgba(20, 31, 56, 1);
     padding: 0.5rem 1rem;
     /* Smoothed borders */
     border-radius: 10px;
@@ -27,13 +27,22 @@
 .download-file-button h5 {
     margin: 0;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: rgba(39, 61, 110, 1);
 }
 
 /* Hover effects for the button */
 .download-file-button:hover {
-    /* Slightly lighter ocean blue on hover */
-    background-color: #0090D4;
+    /* Ocean blue background */
+    background-color: rgba(49, 81, 140, 1);
     /* Lift the button slightly */
     transform: translateY(-3px);
 }
+
+    .download-file-button:hover h5 {
+        color: aliceblue;
+    }
+
+    .download-file-button:hover img {
+        filter: brightness(0) invert(1) brightness(1000%);
+    }

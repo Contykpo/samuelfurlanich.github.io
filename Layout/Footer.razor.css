@@ -6,3 +6,25 @@
     padding: 5rem 0 3rem;
     width: 100vw;
 }
+
+.contact {
+    background-color: aliceblue;
+}
+
+.loading-block {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.title-paragraph {
+    margin-top: 0;
+    color: rgba(39, 61, 110, 1);
+    font-weight: 600;
+}

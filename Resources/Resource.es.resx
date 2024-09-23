@@ -165,7 +165,13 @@
   <data name="projects" xml:space="preserve">
     <value>Proyectos</value>
   </data>
+  <data name="send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Samuel Furlanich Curriculum Vitae</value>
+  </data>
+  <data name="titleFooter" xml:space="preserve">
+    <value>Creado por </value>
   </data>
 </root>

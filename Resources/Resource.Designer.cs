@@ -205,11 +205,29 @@ namespace samuelfurlanich.github.io.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        internal static string send {
+            get {
+                return ResourceManager.GetString("send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Samuel Furlanich Portfolio.
         /// </summary>
         internal static string title {
             get {
                 return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created by .
+        /// </summary>
+        internal static string titleFooter {
+            get {
+                return ResourceManager.GetString("titleFooter", resourceCulture);
             }
         }
     }

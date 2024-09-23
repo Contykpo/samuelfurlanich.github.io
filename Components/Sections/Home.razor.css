@@ -81,9 +81,9 @@
     display: flex;
     align-items: center;
     /* Ocean blue background */
-    background-color: #0077B6;
+    background-color: aliceblue;
     /* Dark blue border */
-    border: 2px solid #005A8C;
+    border: 2px solid rgba(20, 31, 56, 1);
     padding: 0.5rem 1rem;
     /* Smoothed borders */
     border-radius: 10px;
@@ -104,59 +104,25 @@
 .email-link h5 {
     margin: 0;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: rgba(39, 61, 110, 1);
 }
 
 /* Hover effects for the button */
 .email-link:hover {
-    /* Slightly lighter ocean blue on hover */
-    background-color: #0090D4;
+    /* Ocean blue background */
+    background-color: rgba(49, 81, 140, 1);
     /* Lift the button slightly */
     transform: translateY(-3px);
 }
 
-
-/* Styles for the dropdown button */
-.dropdown-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    /* Ocean blue background */
-    background-color: #0077B6;
-    /* Dark blue border */
-    border: 2px solid #005A8C;
-    padding: 0.5rem 1rem;
-    /* Smoothed borders */
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-    .dropdown-button h5 {
-        margin: 0;
-        font-size: 1.2rem;
-        font-weight: 500;
+    .email-link:hover h5 {
+        color: aliceblue;
     }
 
-.dropdown-button-icon {
-    width: 24px;
-    height: 24px;
-    /* Space between the image and the text */
-    margin-left: 0.75rem;
-}
-
-/* Dropdown container behaves like a grid column of two rows */
-.dropdown-container {
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    justify-content: center;
-    vertical-align: central;
-    align-content: center;
-}
+    .email-link:hover img {
+        filter: brightness(0) invert(1) brightness(1000%);
+    }
 
 
 /* Styling for the email button container */
@@ -171,9 +137,9 @@
     display: flex;
     align-items: center;
     /* Ocean blue background */
-    background-color: #0077B6;
+    background-color: aliceblue;
     /* Dark blue border */
-    border: 2px solid #005A8C;
+    border: 2px solid rgba(20, 31, 56, 1);
     padding: 0.5rem 1rem;
     /* Smoothed borders */
     border-radius: 10px;
@@ -194,16 +160,25 @@
 .google-drive-link h5 {
     margin: 0;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: rgba(39, 61, 110, 1);
 }
 
 /* Hover effects for the button */
 .google-drive-link:hover {
-    /* Slightly lighter ocean blue on hover */
-    background-color: #0090D4;
+    /* Ocean blue background */
+    background-color: rgba(49, 81, 140, 1);
     /* Lift the button slightly */
     transform: translateY(-3px);
 }
+
+    .google-drive-link:hover h5 {
+        color: aliceblue;
+    }
+
+    .google-drive-link:hover img {
+        filter: brightness(0) invert(1) brightness(1000%);
+    }
 
 
 .grid-container {

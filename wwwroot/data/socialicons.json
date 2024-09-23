@@ -1,8 +1,14 @@
 {
-  "email": "images/socials/envelope.svg",
-  "gitHub": "images/socials/github.svg",
-  "instagram": "images/socials/instagram.svg",
-  "linkedIn": "images/socials/linkedin.svg",
+  "Email": "images/socials/envelope.svg",
+  "EmailAlternative": "images/socials/envelope-blue.svg",
+  "GitHub": "images/socials/github.svg",
+  "GitHubAlternative": "images/socials/github-blue.svg",
+  "Instagram": "images/socials/instagram.svg",
+  "InstagramAlternative": "images/socials/instagram-blue.svg",
+  "LinkedIn": "images/socials/linkedin.svg",
+  "LinkedInAlternative": "images/socials/linkedin-blue.svg",
   "GoogleDrive": "images/socials/googledrive.svg",
-  "DownloadFile": "images/socials/downloadfile.svg"
+  "GoogleDriveAlternative": "images/socials/googledrive-blue.svg",
+  "DownloadFile": "images/socials/downloadfile.svg",
+  "DownloadFileAlternative": "images/socials/downloadfile-blue.svg"
 }

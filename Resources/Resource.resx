@@ -165,7 +165,13 @@
   <data name="projects" xml:space="preserve">
     <value>Projects</value>
   </data>
+  <data name="send" xml:space="preserve">
+    <value>Send</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Samuel Furlanich Portfolio</value>
+  </data>
+  <data name="titleFooter" xml:space="preserve">
+    <value>Created by </value>
   </data>
 </root>

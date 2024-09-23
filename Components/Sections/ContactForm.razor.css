@@ -53,22 +53,6 @@
             outline: none;
         }
 
-    /* Form button */
-    .contact-form button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
 
 /* Success and error messages */
 .message {
@@ -96,6 +80,45 @@
     font-size: 0.9rem;
     margin-top: 0.25rem;
 }
+
+/* Styling for the send form button */
+.send-button {
+    display: flex;
+    align-items: center;
+    /* Ocean blue background */
+    background-color: aliceblue;
+    /* Dark blue border */
+    border: 2px solid rgba(20, 31, 56, 1);
+    padding: 0.5rem 1.5rem;
+    /* Smoothed borders */
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Styling for the text inside the google drive button */
+    .send-button h5 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: rgba(39, 61, 110, 1);
+    }
+
+    /* Hover effects for the button */
+    .send-button:hover {
+        /* Ocean blue background */
+        background-color: rgba(49, 81, 140, 1);
+    }
+
+        .send-button:hover h5 {
+            color: aliceblue;
+        }
 
 /* Grid titles next to the panel (desktop view) */
 .grid-header {
