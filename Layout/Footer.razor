@@ -22,16 +22,16 @@
                     <img src="@icons.GitHubAlternative" alt="GitHub" class="social-icon" />
                 </a>
             }
+            @if (string.IsNullOrWhiteSpace(property.LinkedIn) is false)
+            {
+                <a href="https://www.linkedin.com/in/samuel-furlanich-7b7838227/" target="_blank" rel="noopener noreferrer">
+                    <img src="@icons.LinkedInAlternative" alt="LinkedIn" class="social-icon" />
+                </a>
+            }
             @if (string.IsNullOrWhiteSpace(property.Instagram) is false)
             {
                 <a href="https://instagram.com/@(property.Instagram)" target="_blank" rel="noopener noreferrer">
                     <img src="@icons.InstagramAlternative" alt="Instagram" class="social-icon" />
-                </a>
-            }
-            @if (string.IsNullOrWhiteSpace(property.LinkedIn) is false)
-            {
-                <a href="https://linkedin.com/in/@(property.LinkedIn)" target="_blank" rel="noopener noreferrer">
-                    <img src="@icons.LinkedInAlternative" alt="LinkedIn" class="social-icon" />
                 </a>
             }
         </div>
