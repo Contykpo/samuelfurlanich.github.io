@@ -8,5 +8,6 @@
         public string GitHub { get; set; } = string.Empty;
         public string Instagram { get; set; } = string.Empty;
         public string LinkedIn { get; set; } = string.Empty;
+        public string CVLink { get; set; } = string.Empty;
     }
 }

@@ -1,12 +1,9 @@
 {
-  "description": "I'm a Computer Science student studying at University of Buenos Aires. I enjoy creating unique and useful applications in creative ways.",
+  "description": "I am a third‑year Computer Science student at University of Buenos Aires, passionate about creating polished, high‑quality applications.",
   "skills": [
-    "C#",
-    ".NET",
-    "Blazor",
-    "MAUI, WPF, Unity",
-    "Entity Framework",
-    "SQL"
+    "Frameworks: .NET, ASP. NET both Core and MVC, Entity Framework Core, Blazor Server and WebAssembly",
+    "Other Technologies: C#, HTML5, CSS, XAML, SQL Server, PostgreSQL, SQLite, Git, RESTful APIs, Azure",
+    "Languages: English, Spanish"
   ],
-  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By working on solutions for complex problems I continually grow my knowledge and skills to make powerful state-of-the-art applications."
+  "detailOrQuote": "Eager to begin my professional journey, I aim to deepen my expertise in fullstack development by contributing to innovative tech solutions and continually growing as a developer."
 }

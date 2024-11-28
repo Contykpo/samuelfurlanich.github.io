@@ -83,6 +83,10 @@
     padding-inline-start: 20px;
 }
 
+.skills-list-item {
+    padding: 1rem;
+}
+
 /* Media query for larger screens (e.g., desktops, tablets in landscape mode) */
 /* Adjust breakpoint as needed */
 @media screen and (min-width: 1024px) {
@@ -95,7 +99,7 @@
 
     .skills-list {
         /* Two columns for larger screens */
-        columns: 2;
+        columns: 1;
     }
 }
 

@@ -28,7 +28,7 @@
                             </a>
                         </div>
                         <div class="google-drive-button">
-                            <a href="https://drive.google.com/file/d/1Y_vjXek98UsueXW0gOTGb8Sj702j2gko/view?usp=drive_link" target=”_blank” class="google-drive-link">
+                            <a href="@(property.CVLink)" target=”_blank” class="google-drive-link">
                                 <h5>@Localizer["myCV"]</h5>
                                 <img src="@icons.GoogleDriveAlternative" alt="Google Drive Resume File" class="google-drive-icon" />
                             </a>
@@ -77,5 +77,4 @@
 
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "home");
     }
-
 }
