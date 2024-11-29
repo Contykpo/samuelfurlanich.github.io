@@ -1,30 +1,30 @@
 ﻿[
   {
-    "Title": "Uternfor, Stains of Civilization, rogue-like survival game.",
-    "Description": "Adventure innto the depths of The Wasteland, exploring caves and solving puzzles in low-poly first-person game powered by UE5 and C++",
-    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
-    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
-    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
+    "Title": "Documancer, GPT Assisted Narrator",
+    "Description": "Serialize roleplay events and build a rich world through log notes and an AI driven event narrator.",
+    "Url": "https://github.com/Contykpo/Documancer",
+    "PreviewImages": [ "images/projects/documancerProfile.svg" ],
+    "Technologies": [ "images/technologies/net.svg", "images/technologies/aspnetcore.svg", "images/technologies/blazor.svg", "images/technologies/gpt.svg", "images/technologies/postgresql.svg" ]
   },
   {
-    "Title": "Uternfor, Stains of Civilization, rogue-like survival game.",
-    "Description": "Adventure innto the depths of The Wasteland, exploring caves and solving puzzles in low-poly first-person game powered by UE5 and C++",
+    "Title": "Milky Pants Cheese, production and inventory management",
+    "Description": "An ASP. NET Core application with backend powered by Entity Framework and MySQL. Based on a fictional dairy company for the Argentina's INET - ETP NATIONAL OLYMPICS 2021.",
     "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
-    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
-    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
+    "PreviewImages": [ "images/projects/milkyPantsMilkyUser.svg", "images/projects/milkyPantsMilkingYard.svg", "images/projects/milkyPantsAdmin.svg", "images/projects/milkyPantsYeastManager.svg", "images/projects/milkyPantsMonitoring.svg" ],
+    "Technologies": [ "images/technologies/net.svg", "images/technologies/aspnetcore.svg", "images/technologies/mysql.svg" ]
   },
   {
-    "Title": "Milky Pants Cheese, production and inventory management.",
-    "Description": "An ASP. NET Core application with backend powered by Entity Framework and SQL Server. Based on a fictional dairy company for the 2021 Information Technology Olympics.",
-    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
-    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
-    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
+    "Title": "AplicacionGM, roleplay campaign manager",
+    "Description": "Create GURPS campaigns with their own sets of Characters Sheets, Maps, Actions, etc. And save your progress in an SQLite database to resume your roleplay sessions later on.",
+    "Url": "https://github.com/ElGranNachito/AplicacionGM",
+    "PreviewImages": [ "images/projects/aplicacionGMHome.svg", "images/projects/aplicacionGMCharacters.svg", "images/projects/aplicacionGMCharacterSheet.svg" ],
+    "Technologies": [ "images/technologies/net.svg", "images/technologies/wpf.svg", "images/technologies/sqlite.svg" ]
   },
   {
-    "Title": "Milky Pants Cheese, production and inventory management.",
-    "Description": "An ASP. NET Core application with backend powered by Entity Framework and SQL Server. Based on a fictional dairy company for the 2021 Information Technology Olympics.",
-    "Url": "https://github.com/Contykpo/MilkyPantsCheese-Administracion-",
-    "PreviewImages": [ "images/projects/placeholder.svg", "images/projects/placeholder2.svg" ],
-    "Technologies": [ "images/technologies/html.png", "images/technologies/css.png" ]
+    "Title": "AstroLogger, Logging Library",
+    "Description": "Add the AstroLogger DLL reference to your project and create custom or default Loggers and Logger Factories with desired severity, format, and extra parameters.",
+    "Url": "https://github.com/Contykpo/AstroLogger",
+    "PreviewImages": [ "images/projects/astroicon.svg" ],
+    "Technologies": [ "images/technologies/net.svg" ]
   }
 ]
