@@ -19,16 +19,16 @@
             }
             else
             {
-                <p class="large">@aboutMe.Description</p>
+                <p class="large">@Localizer[$"{aboutMe.Description}"]</p>
                 <hr />
                 <ul class="skills-list">
                     @foreach (var skill in aboutMe.Skills)
                     {
-                        <li key="@skill" class="skills-list-item">@skill</li>
+                        <li key="@skill" class="skills-list-item">@Localizer[$"{skill}"]</li>
                     }
                 </ul>
                 <hr />
-                <p class="detail">@aboutMe.DetailOrQuote</p>
+                <p class="detail">@Localizer[$"{aboutMe.DetailOrQuote}"]</p>
             }
         </div>
     </div>

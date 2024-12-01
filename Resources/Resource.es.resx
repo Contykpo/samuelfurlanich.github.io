@@ -174,4 +174,43 @@
   <data name="titleFooter" xml:space="preserve">
     <value>Creado por </value>
   </data>
+  <data name="Frameworks: .NET, ASP. NET both Core and MVC, Entity Framework Core, Blazor Server and WebAssembly" xml:space="preserve">
+    <value>Frameworks: .NET, ASP. NET both Core and MVC, Entity Framework Core, Blazor Server and WebAssembly</value>
+  </data>
+  <data name="Other Technologies: C#, HTML5, CSS, XAML, SQL Server, PostgreSQL, SQLite, Git, RESTful APIs, Azure" xml:space="preserve">
+    <value>Tecnologías: C#, HTML5, CSS, XAML, SQL Server, PostgreSQL, SQLite, Git, RESTful APIs, Azure</value>
+  </data>
+  <data name="Languages: English, Spanish" xml:space="preserve">
+    <value>Idiomas: Ingles, Español</value>
+  </data>
+  <data name="I am a third‑year Computer Science student at University of Buenos Aires, passionate about creating polished, high‑quality applications." xml:space="preserve">
+    <value>Soy un estudiante de tercer año de Ciencias de la Computación en la Universidad de Buenos Aires, apasionado por la creacion de aplicaciones pulidas y de alta calidad.</value>
+  </data>
+  <data name="Eager to begin my professional journey, I aim to deepen my expertise in fullstack development by contributing to innovative tech solutions and continually growing as a developer." xml:space="preserve">
+    <value>Ansioso por comenzar mi trayectoria profesional, tengo como objetivo profundizar mi experiencia en desarrollo fullstack contribuyendo a soluciones tecnológicas innovadoras y creciendo continuamente como desarrollador.</value>
+  </data>
+  <data name="Documancer, GPT Assisted Narrator" xml:space="preserve">
+    <value>Documancer, Narrador Asistido por GPT</value>
+  </data>
+  <data name="Serialize roleplay events and build a rich world through log notes and an AI driven event narrator." xml:space="preserve">
+    <value>Serializar eventos de rol y construir un mundo rico mediante notas de registro y un narrador de eventos impulsado por inteligencia artificial.</value>
+  </data>
+  <data name="Milky Pants Cheese, production and inventory management" xml:space="preserve">
+    <value>Milky Pants Cheese, administración de producción e inventario</value>
+  </data>
+  <data name="An ASP. NET Core application with backend powered by Entity Framework and MySQL. Based on a fictional dairy company for the Argentina's INET - ETP NATIONAL OLYMPICS 2021." xml:space="preserve">
+    <value>Una aplicación ASP.NET Core con un backend impulsado por Entity Framework y MySQL. Basada en una empresa láctea ficticia para las Olimpíadas Nacionales ETP del INET de Argentina 2021.</value>
+  </data>
+  <data name="AplicacionGM, roleplay campaign manager" xml:space="preserve">
+    <value>AplicacionGM, administración de campañas de rol</value>
+  </data>
+  <data name="Create GURPS campaigns with their own sets of Characters Sheets, Maps, Actions, etc. And save your progress in an SQLite database to resume your roleplay sessions later on." xml:space="preserve">
+    <value>Crea campañas de GURPS con sus propios conjuntos de Hojas de Personaje, Mapas, Acciones, etc. y guarda tu progreso en una base de datos SQLite para retomar tus sesiones de rol más adelante.</value>
+  </data>
+  <data name="AstroLogger, Logging Library" xml:space="preserve">
+    <value>AstroLogger, Libreria de Logging</value>
+  </data>
+  <data name="Add the AstroLogger DLL reference to your project and create custom or default Loggers and Logger Factories with desired severity, format, and extra parameters." xml:space="preserve">
+    <value>Agrega la referencia de la DLL de AstroLogger a tu proyecto y crea Loggers y Fábricas de Loggers personalizados o predeterminados con la severidad, formato y parámetros adicionales que desees.</value>
+  </data>
 </root>
