@@ -1,6 +1,7 @@
 ﻿@page "/"
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
+@inject BrowserService BrowserService
 @inject IStringLocalizer<Resource> Localizer
 @inject IJSRuntime Js
 
@@ -9,7 +10,7 @@
 <div class="glass-overlay">
     <!-- Spotlight div -->
     <div id="spotlight" class="spotlight"></div>
-    <Header Http=@Http />
+    <Header Http=@Http BrowserService=@BrowserService />
     <Home Http=@Http JS=@Js HeroImageService=@HeroImageService />
     <About Http=@Http HeroImageService=@HeroImageService />
     <Portfolio Http=@Http HeroImageService=@HeroImageService />

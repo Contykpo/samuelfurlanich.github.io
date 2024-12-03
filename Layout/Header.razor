@@ -4,7 +4,16 @@
 <nav class="navbar" id="navbar">
     <div class="navbar-title">
         <h5 style="padding-top: 0.6rem;">
-            <a href="#home" class="navbar-logo">Samuel Furlanich</a>
+            @if (isMobile)
+            {
+                <a href="#home">
+                    <img src="icon-192.png" alt="GitHub" class="social-icon" />
+                </a>
+            }
+            else
+            {
+                <a href="#home" class="navbar-logo">Samuel Furlanich</a>
+            }
         </h5>
 
         <a href="https://github.com/Contykpo">
@@ -58,12 +67,26 @@
     [Parameter, EditorRequired]
     public required HttpClient Http { get; set; }
 
+    [Parameter, EditorRequired]
+    public required BrowserService BrowserService { get; set; }
+
+    public BrowserDimensions Dimensions { get; set; }
+
     private SocialIcons? icons;
 
     private bool isMenuOpen = false;
+    private bool isMobile = false;
+
 
     protected override async Task OnInitializedAsync()
     {
+        Dimensions = await BrowserService.GetDimensions();
+        
+        isMobile = Dimensions.Width <= 768;
+        
+        // await BrowserService.RegisterResizeListener();
+        // BrowserService.DimensionsChanged += UpdateDimensions;
+
         icons = await Http.GetFromJsonAsync<SocialIcons>("data/socialicons.json");
     }
 
@@ -71,4 +94,18 @@
 
     private void CloseMenu() => isMenuOpen = false;
 
+    private void UpdateDimensions(BrowserDimensions newDimensions)
+    {
+        Dimensions = newDimensions;
+
+        isMobile = Dimensions.Width <= 768;
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        // Unsubscribe from the event when the component is disposed.
+        BrowserService.DimensionsChanged -= UpdateDimensions;
+    }
 }
