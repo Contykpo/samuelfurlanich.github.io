@@ -103,35 +103,7 @@
     }
 }
 
-/* Media query for smaller screens (e.g., tablets in portrait mode, mobile phones) */
-@media screen and (max-width: 1024px) {
-    .about-content {
-        /* Adjust width for smaller screens */
-        max-width: 85%;
-        padding: 2.5rem;
-    }
-}
-
-/* Media query for smaller screens (e.g., phones in portrait mode) */
-@media screen and (max-width: 767px) {
-    .about-content {
-        /* Full width with some padding */
-        width: 90%;
-        /* Adjust padding */
-        padding: 2rem 4rem;
-    }
-
-    .skills-list {
-        /* Single column for small screens */
-        columns: 1;
-        /* Align with content */
-        padding-inline-start: 0;
-        /* Remove margin to align with container */
-        margin: 0;
-    }
-}
-
-/* optional: responsive typography */ 
+/* optional: responsive typography */
 h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -146,18 +118,57 @@ p {
     color: aliceblue;
 }
 
-p.large {
-    font-size: 1.5rem;
-}
+    p.large {
+        font-size: 1.5rem;
+    }
 
-p.detail {
-    padding: 1rem 3rem 0;
-}
+    p.detail {
+        padding: 1rem 3rem 0;
+    }
 
 li {
     color: aliceblue;
 }
 
-li::marker {
-    color: aliceblue;
+    li::marker {
+        color: aliceblue;
+    }
+
+/* Media query for smaller screens (e.g., tablets in portrait mode, mobile phones) */
+@media screen and (max-width: 1024px) {
+    .about-content {
+        /* Adjust width for smaller screens */
+        max-width: 85%;
+        padding: 2.5rem;
+    }
+}
+
+/* Media query for smaller screens (e.g., phones in portrait mode) */
+@media screen and (max-width: 768px) {
+    .about-content {
+        /* Full width with some padding */
+        width: 90%;
+        /* Adjust padding */
+        padding: 2rem 4rem;
+        /*Align paragraphs text to the left*/
+        text-align: left;
+        /*Reduce pannel padding for larger space to fit the text*/
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .skills-list {
+        /* Single column for small screens */
+        columns: 1;
+        /* Align with content */
+        padding-inline-start: 0;
+        /* Remove margin to align with container */
+        margin: 0;
+    }
+
+    /*
+    p.large {
+        font-size: 1rem;
+    }
+    */
 }

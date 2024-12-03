@@ -24,7 +24,7 @@
     "Title": "AstroLogger, Logging Library",
     "Description": "Add the AstroLogger DLL reference to your project and create custom or default Loggers and Logger Factories with desired severity, format, and extra parameters.",
     "Url": "https://github.com/Contykpo/AstroLogger",
-    "PreviewImages": [ "images/projects/astroicon.svg" ],
+    "PreviewImages": [ "images/projects/astroIcon.svg" ],
     "Technologies": [ "images/technologies/net.svg" ]
   }
 ]
