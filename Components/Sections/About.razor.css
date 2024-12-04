@@ -16,15 +16,15 @@
 }
 
 .about-title {
-    padding-top: 8rem;
+    padding-top: 4rem;
 }
 
 /* About content container */
 .about-content {
     /* Dark semi-transparent background */
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(240, 248, 255, 1);
     /* Light-blue border */
-    border: 2px solid rgba(173, 216, 230, 0.8);
+    border: 2px solid rgba(39, 61, 110, 0.8);
     /* Smooth rounded corners */
     border-radius: 15px;
     /* Padding inside the panel */
@@ -36,7 +36,37 @@
     /* For positioning animations */
     position: relative;
     /* Subtle shadow for depth */
-    box-shadow: 0 0 20px rgba(173, 216, 230, 0.5);
+    box-shadow: 0 0 20px rgba(39, 61, 110, 0.5);
+    /* Prevent content overflow */
+    overflow: hidden;
+    /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Glowing pulse animation */
+    animation: pulse 3s infinite;
+    /* Center content text */
+    text-align: center;
+}
+
+/* About content container */
+.about-skills-content {
+    /* Dark semi-transparent background */
+    background-color: rgba(240, 248, 255, 1);
+    /* Light-blue border */
+    border: 2px solid rgba(39, 61, 110, 0.8);
+    /* Smooth rounded corners */
+    border-radius: 15px;
+    /* Padding inside the panel */
+    padding-left: 2rem;
+    /* Padding inside the panel */
+    padding-right: 2rem;
+    /* Width limit for the panel */
+    max-width: 90%;
+    /* Center panel horizontally */
+    margin: 2rem auto;
+    /* For positioning animations */
+    position: relative;
+    /* Subtle shadow for depth */
+    box-shadow: 0 0 20px rgba(39, 61, 110, 0.5);
     /* Prevent content overflow */
     overflow: hidden;
     /* Smooth transition for hover effect */
@@ -50,33 +80,39 @@
 /* Glowing pulse effect */
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+        box-shadow: 0 0 10px rgba(39, 61, 110, 0.6);
     }
 
     50% {
-        box-shadow: 0 0 20px rgba(173, 216, 230, 1);
+        box-shadow: 0 0 20px rgba(39, 61, 110, 1);
     }
 
     100% {
-        box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+        box-shadow: 0 0 10px rgba(39, 61, 110, 0.6);
     }
 }
 
 /* Hover effect: Lightens background on hover */
 .about-content:hover {
     /* Lighter semi-transparent background */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(240, 248, 255, 0.8);
     /* Stronger shadow when hovered */
-    box-shadow: 0 0 30px rgba(173, 216, 230, 1);
+    box-shadow: 0 0 30px rgba(39, 61, 110, 1);
+}
+
+/* Hover effect: Lightens background on hover */
+.about-skills-content:hover {
+    /* Lighter semi-transparent background */
+    background-color: rgba(240, 248, 255, 0.8);
+    /* Stronger shadow when hovered */
+    box-shadow: 0 0 30px rgba(39, 61, 110, 1);
 }
 
 /* Skills list styling */
 .skills-list {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 2rem 0;
-    /* Remove extra padding to avoid overflow */
-    padding: 0;
     /* Gap between columns */
     column-gap: 2rem;
     /* Ensure bullets are not too close to the edge */
@@ -97,6 +133,15 @@
         padding: 3rem;
     }
 
+    .about-skills-content {
+        /* Make the block wider on desktop */
+        max-width: 80%;
+        /* Increase padding to suit the wider layout */
+        padding-left: 3rem;
+        /* Increase padding to suit the wider layout */
+        padding-right: 3rem;
+    }    
+
     .skills-list {
         /* Two columns for larger screens */
         columns: 1;
@@ -106,20 +151,22 @@
 /* optional: responsive typography */
 h2 {
     font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 1.5rem;
     color: aliceblue;
 }
 
 hr {
-    color: aliceblue;
+    color: rgba(39, 61, 110, 1);
 }
 
 p {
-    color: aliceblue;
+    color: rgba(39, 61, 110, 1);
 }
 
     p.large {
         font-size: 1.5rem;
+        font-weight: bold;
     }
 
     p.detail {
@@ -127,11 +174,13 @@ p {
     }
 
 li {
-    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(39, 61, 110, 1);
 }
 
     li::marker {
-        color: aliceblue;
+        color: rgba(39, 61, 110, 1);
     }
 
 /* Media query for smaller screens (e.g., tablets in portrait mode, mobile phones) */
@@ -157,11 +206,25 @@ li {
         padding-right: 1rem;
     }
 
+    .about-skills-content {
+        /* Full width with some padding */
+        width: 90%;
+        /* Adjust padding */
+        padding: 2rem 4rem;
+        /*Align paragraphs text to the left*/
+        text-align: left;
+        /*Reduce pannel padding for larger space to fit the text*/
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .skills-list {
         /* Single column for small screens */
         columns: 1;
         /* Align with content */
         padding-inline-start: 0;
+        /*Padding left to avoid colliding with borders*/
+        padding-left: 1.5rem;
         /* Remove margin to align with container */
         margin: 0;
     }

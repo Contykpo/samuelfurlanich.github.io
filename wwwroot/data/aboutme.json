@@ -1,7 +1,7 @@
 {
   "description": "I am a third‑year Computer Science student at University of Buenos Aires, passionate about creating polished, high‑quality applications.",
   "skills": [
-    "Frameworks: .NET, ASP. NET both Core and MVC, Entity Framework Core, Blazor Server and WebAssembly",
+    "Frameworks: .NET, ASP. NET both Core and MVC, Entity Framework Core, Blazor Server and WebAssembly, MudBlazor",
     "Other Technologies: C#, HTML5, CSS, XAML, SQL Server, PostgreSQL, SQLite, Git, RESTful APIs, Azure",
     "Languages: English, Spanish"
   ],

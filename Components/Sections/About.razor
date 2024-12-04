@@ -11,7 +11,8 @@
             <h2>@Localizer["about"]</h2>
         </div>
     </div>
-    <div data-aos="flip-up" data-aos-duration="500">
+
+    <div data-aos="fade-right" data-aos-duration="500">
         <div class="about-content">
             @if (aboutMe is null)
             {
@@ -20,14 +21,34 @@
             else
             {
                 <p class="large">@Localizer[$"{aboutMe.Description}"]</p>
-                <hr />
+            }
+        </div>
+    </div>
+    <div data-aos="fade-left" data-aos-duration="500">
+        <div class="about-skills-content">
+            @if (aboutMe is null)
+            {
+                <p><em>@Localizer["loading"]</em></p>
+            }
+            else
+            {
                 <ul class="skills-list">
                     @foreach (var skill in aboutMe.Skills)
                     {
                         <li key="@skill" class="skills-list-item">@Localizer[$"{skill}"]</li>
                     }
                 </ul>
-                <hr />
+            }
+        </div>
+    </div>
+    <div data-aos="flip-up" data-aos-duration="500">
+        <div class="about-content">
+            @if (aboutMe is null)
+            {
+                <p><em>@Localizer["loading"]</em></p>
+            }
+            else
+            {
                 <p class="large">@Localizer[$"{aboutMe.DetailOrQuote}"]</p>
             }
         </div>

@@ -5,9 +5,11 @@
     {
         <img class="background" src="@(hero.Source)" alt="@(hero.AlternateText)" />
     }
+    
     <div data-aos="fade-up">
         <h2>@Localizer["projects"]</h2>
     </div>
+
     <div class="project-grid">
         @if (projects is null)
         {
